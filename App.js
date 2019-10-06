@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import { AppLoading, Asset } from "expo";
+import { AppLoading } from "expo";
+import { Asset } from "expo-asset";
 
 import Navigation from "./navigation";
 import { Block } from "./components";
@@ -14,7 +15,7 @@ const images = [
   require("./assets/icons/flowers.png"),
   require("./assets/icons/sprayers.png"),
   require("./assets/icons/pots.png"),
-  require("./assets/icons/fetilizers.png"),
+  require("./assets/icons/fertilizers.png"),
   require("./assets/images/plants_1.png"),
   require("./assets/images/plants_2.png"),
   require("./assets/images/plants_3.png"),
@@ -55,18 +56,11 @@ export default class App extends Component {
     }
 
     return (
-      <View style={styles.container}>
+      <Block white>
         <Navigation />
-      </View>
+      </Block>
     );
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+const styles = StyleSheet.create({});
